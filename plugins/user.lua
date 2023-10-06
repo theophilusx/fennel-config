@@ -1,31 +1,6 @@
-return {
-  -- You can also add new plugins here as well:
-  -- Add plugins, the lazy syntax
-  -- "andweeb/presence.nvim",
-  -- {
-  --   "ray-x/lsp_signature.nvim",
-  --   event = "BufRead",
-  --   config = function()
-  --     require("lsp_signature").setup()
-  --   end,
-  -- },
-  {
-    "dundalek/parpar.nvim",
-    dependencies = { "gpanders/nvim-parinfer", "julienvincent/nvim-paredit" },
-    config = function()
-      local paredit = require "nvim-paredit"
-      require("parpar").setup {
-        paredit = {
-          -- pass any nvim-paredit options here
-          keys = {
-            -- custom bindings are automatically wrapped
-            ["<A-H>"] = { paredit.api.slurp_backwards, "Slurp backwards" },
-            ["<A-J>"] = { paredit.api.barf_backwards, "Barf backwards" },
-            ["<A-K>"] = { paredit.api.barf_forwards, "Barf forwards" },
-            ["<A-L>"] = { paredit.api.slurp_forwards, "Slurp forwards" },
-          },
-        },
-      }
-    end,
-  },
-}
+-- [nfnl] Compiled from plugins/user.fnl by https://github.com/Olical/nfnl, do not edit.
+local uu = require("user.util")
+local function _1_()
+  return (require("leap")).add_default_mappings()
+end
+return {uu.tx("Olical/aniseed"), uu.tx("Olical/nvim-local-fennel"), uu.tx("Olical/nfnl", {ft = {"fennel"}}), uu.tx("nvim-lua/plenary.nvim"), uu.tx("PeterRincker/vim-argumentative"), uu.tx("bakpakin/fennel.vim"), uu.tx("ggandor/leap.nvim", {config = _1_}), uu.tx("habamax/vim-asciidoctor"), uu.tx("hylang/vim-hy"), uu.tx("janet-lang/janet.vim"), uu.tx("lambdalisue/suda.vim"), uu.tx("radenling/vim-dispatch-neovim"), uu.tx("tpope/vim-abolish"), uu.tx("tpope/vim-commentary"), uu.tx("tpope/vim-dadbod"), uu.tx("tpope/vim-dispatch"), uu.tx("tpope/vim-eunuch"), uu.tx("tpope/vim-fugitive"), uu.tx("tpope/vim-repeat"), uu.tx("tpope/vim-surround"), uu.tx("tpope/vim-unimpaired"), uu.tx("tpope/vim-vinegar"), uu.tx("wlangstroth/vim-racket")}
